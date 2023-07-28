@@ -30,16 +30,18 @@ const editFeedback =(item) =>{
   })
 }
 
+const updateFeedback =(id,updItem) =>{
+  setFeedback(feedback.map((item) => item.id === id ? {...item,...updItem} : item))
+}
+
 const addFeedback = (newFeedback) =>{
     newFeedback.id = uuidv4()
     setFeedback([newFeedback,...feedback])
-    
-
   }
 
 return(
 <FeedbackContext.Provider 
-value={{feedback,deleteFeedback,addFeedback,editFeedback, feedbackEdit}}>
+value={{feedback,deleteFeedback,addFeedback,editFeedback, feedbackEdit,updateFeedback}}>
     {children}
 </FeedbackContext.Provider>
 )

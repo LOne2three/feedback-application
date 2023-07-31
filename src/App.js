@@ -7,9 +7,7 @@ import AboutPage from './Pages/AboutPage'
 import AboutIconLink from './components/AboutIconLink'
 import {FeedbackProvider} from './context/FeedbackContext'
 
-
 function App() {
-
 return(
   <FeedbackProvider>
   <Router>
@@ -29,15 +27,12 @@ return(
           </Route>
          <Route path='/about' element={<AboutPage />}></Route>
         </Routes>
-  
       </div>
   </Router>
   </FeedbackProvider>
     
       )
   
-
-
 }
 
 export default App;

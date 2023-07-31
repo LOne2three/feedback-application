@@ -1,8 +1,6 @@
 import{createContext, useState, useEffect } from  'react'
 
-
 const FeedbackContext = createContext()
-
 export const FeedbackProvider = ({children}) => {
 const[feedback,setFeedback] = useState([])
 const[isLoading, setIsLoading] = useState(true)
@@ -72,6 +70,5 @@ value={{feedback,deleteFeedback,addFeedback,editFeedback, feedbackEdit,updateFee
 </FeedbackContext.Provider>
 )
 }
-
 
 export default FeedbackContext
